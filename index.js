@@ -1,4 +1,4 @@
-function getTeamHtml(team){
+function getTeamHtml(team) {
   return `<tr>
         <td>${team.group}</td> 
         <td>${team.members}</td> 
@@ -14,12 +14,15 @@ function getTeamHtml(team){
 }
 
 function displayTeams(teams) {
-  var teamsHtml = "";
-  teams.forEach(function (team) {
-    teamsHtml += getTeamHtml(team);
-  });
+  //var teamsHtml = "";
+  // teams.forEach(function (team) {
+  //   teamsHtml += getTeamHtml(team);
+  // });
 
-  document.querySelector("table tbody").innerHTML = teamsHtml;
+  var teamsHtml = teams.map(function (team) {
+    return getTeamHtml(team);
+  });
+  document.querySelector("table tbody").innerHTML = teamsHtml.join("");
 }
 
 function loadTeams() {
