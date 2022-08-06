@@ -1,34 +1,25 @@
-function displayTeams(teams) {
-  var teamsHtml = "";
-  teams.forEach(function (teams) {
-    teamsHtml += `<tr>
-        <td>${teams.group}</td> 
-        <td>${teams.members}</td> 
-        <td>${teams.projectName}</td>  
+function getTeamHtml(team){
+  return `<tr>
+        <td>${team.group}</td> 
+        <td>${team.members}</td> 
+        <td>${team.projectName}</td>  
         <td> 
-          <a href ="${teams.projectUrl}">open</a> 
+          <a href ="${team.projectUrl}">open</a> 
         </td>
         <td>
             <a href="#">delete</a>
             <a href="#">update</a>
         </td>
      </tr>`;
+}
+
+function displayTeams(teams) {
+  var teamsHtml = "";
+  teams.forEach(function (team) {
+    teamsHtml += getTeamHtml(team);
   });
 
   document.querySelector("table tbody").innerHTML = teamsHtml;
-
-  // for (var i = 0; i < teams.length; i++) {
-  //   td.innerHTML +=
-  //   `<tr>
-  //   <td>${teams[i].group}</td>
-  //   <td>${teams[i].members}</td>
-  //   <td>${teams[i].projectName}</td>
-  //   <td> ${teams[i].projectUrl} </td>
-  //   <td><a href="#">delete</a>
-  //   <a href="#">update</a>
-  //   </td>
-  //   </tr>`;
-  // }
 }
 
 function loadTeams() {
