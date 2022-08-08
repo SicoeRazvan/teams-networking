@@ -23,12 +23,10 @@ function displayTeams(teams) {
 
 function loadTeams() {
   fetch("./data/teams.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (teams) {
+    .then((r) => r.json())
+    .then((teams) => {
       displayTeams(teams);
-    });
+    });  
 }
 
 function $(selector){
@@ -37,10 +35,10 @@ function $(selector){
 
 function submitForm(e) {
   e.preventDefault();
-  var promotion = $("input[name=promotion]").value;
-  var members = $("input[name=members]").value;
-  var name = $("input[name=name]").value;
-  var url = $("input[name=url]").value;
+  const promotion = $("input[name=promotion]").value;
+  const members = $("input[name=members]").value;
+  const name = $("input[name=name]").value;
+  const url = $("input[name=url]").value;
 
   var team = {
     promotion: promotion,
@@ -53,7 +51,7 @@ function submitForm(e) {
 }
 
 function initEvents() {
-  var form = document.getElementById("editForm");
+  const form = document.getElementById("editForm");
   form.addEventListener("submit", submitForm);
 }
 
