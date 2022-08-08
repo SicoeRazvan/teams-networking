@@ -1,11 +1,11 @@
 function getTeamHtml(team) {
   return `
     <tr>
-      <td>${team.group}</td> 
+      <td>${team.promotion}</td> 
       <td>${team.members}</td> 
-      <td>${team.projectName}</td>  
+      <td>${team.name}</td>  
       <td> 
-        <a href ="${team.projectUrl}">open</a> 
+        <a href ="${team.url}">open</a> 
       </td>
       <td>
           <a href="#">delete</a>
@@ -31,4 +31,27 @@ function loadTeams() {
     });
 }
 
+function submitForm(e) {
+  e.preventDefault();
+  var promotion = document.querySelector("input[name=promotion]").value;
+  var members = document.querySelector("input[name=members]").value;
+  var name = document.querySelector("input[name=name]").value;
+  var url = document.querySelector("input[name=url]").value;
+
+  var team = {
+    promotion: promotion,
+    members: members,
+    name: name,
+    url: url
+  };
+
+  console.warn("submit", JSON.stringify(team));
+}
+
+function initEvents() {
+  var form = document.getElementById("editForm");
+  form.addEventListener("submit", submitForm);
+}
+
 loadTeams();
+initEvents();

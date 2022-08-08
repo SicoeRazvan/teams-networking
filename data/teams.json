@@ -1,26 +1,26 @@
 [
   {
-    "group": "FastTrackIT",
+    "promotion": "FastTrackIT",
     "members": "Nicolae Matei, Andrei Ille",
-    "projectName": "Teams Networking",
-    "projectUrl": "https://github.com/nmatei/teams-networking"
+    "name": "Teams Networking",
+    "url": "https://github.com/nmatei/teams-networking"
   },
   {
-    "group": " 2021-won1",
+    "promotion": " 2021-won1",
     "members": "Coman Oana, Adina Bîlc, Bianca Vesa",
-    "projectName": "Medical Inventory store",
-    "projectUrl": "https://github.com/comanoana/medstore"
+    "name": "Medical Inventory store",
+    "url": "https://github.com/comanoana/medstore"
   },
   {
-    "group": " 2021-won1",
+    "promotion": " 2021-won1",
     "members": "Cristi Cosma, Reka Kovacs, Simona Glodean ",
-    "projectName": "DOCS Generator",
-    "projectUrl": "https://github.com/CristiCozma/docsgenerator"
+    "name": "DOCS Generator",
+    "url": "https://github.com/CristiCozma/docsgenerator"
   },
   {
-    "group": "2019-web3",
+    "promotion": "2019-web3",
     "members": "Andreea, Daniela, Ciprian",
-    "projectName": "Maze Game",
-    "projectUrl": "https://github.com/andreeaotet/maze-game-project"
+    "name": "Maze Game",
+    "url": "https://github.com/andreeaotet/maze-game-project"
   }
 ]
