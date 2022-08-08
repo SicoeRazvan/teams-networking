@@ -1,24 +1,20 @@
 function getTeamHtml(team) {
-  return `<tr>
-        <td>${team.group}</td> 
-        <td>${team.members}</td> 
-        <td>${team.projectName}</td>  
-        <td> 
-          <a href ="${team.projectUrl}">open</a> 
-        </td>
-        <td>
-            <a href="#">delete</a>
-            <a href="#">update</a>
-        </td>
-     </tr>`;
+  return `
+    <tr>
+      <td>${team.group}</td> 
+      <td>${team.members}</td> 
+      <td>${team.projectName}</td>  
+      <td> 
+        <a href ="${team.projectUrl}">open</a> 
+      </td>
+      <td>
+          <a href="#">delete</a>
+          <a href="#">update</a>
+      </td>
+    </tr>`;
 }
 
 function displayTeams(teams) {
-  //var teamsHtml = "";
-  // teams.forEach(function (team) {
-  //   teamsHtml += getTeamHtml(team);
-  // });
-
   var teamsHtml = teams.map(function (team) {
     return getTeamHtml(team);
   });
